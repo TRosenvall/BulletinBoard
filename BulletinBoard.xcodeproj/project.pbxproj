@@ -12,6 +12,8 @@
 		8579223C22D39C670044B2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8579223A22D39C670044B2C8 /* Main.storyboard */; };
 		8579223E22D39C680044B2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8579223D22D39C680044B2C8 /* Assets.xcassets */; };
 		8579224122D39C680044B2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8579223F22D39C680044B2C8 /* LaunchScreen.storyboard */; };
+		8592E74922D39F99007681E5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8592E74822D39F99007681E5 /* CloudKit.framework */; };
+		8592E74B22D39FD7007681E5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8592E74A22D39FD7007681E5 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		8579223D22D39C680044B2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8579224022D39C680044B2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8579224222D39C680044B2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8592E74622D39F92007681E5 /* BulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BulletinBoard.entitlements; sourceTree = "<group>"; };
+		8592E74822D39F99007681E5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		8592E74A22D39FD7007681E5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8592E74922D39F99007681E5 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				8579223522D39C670044B2C8 /* BulletinBoard */,
 				8579223422D39C670044B2C8 /* Products */,
+				8592E74722D39F99007681E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +61,7 @@
 		8579223522D39C670044B2C8 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				8592E74622D39F92007681E5 /* BulletinBoard.entitlements */,
 				8579224C22D39CB50044B2C8 /* Models */,
 				8579224B22D39CAF0044B2C8 /* Views */,
 				8579224922D39C7C0044B2C8 /* Controllers */,
@@ -100,8 +108,17 @@
 		8579224C22D39CB50044B2C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8592E74A22D39FD7007681E5 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8592E74722D39F99007681E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8592E74822D39F99007681E5 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +153,14 @@
 				TargetAttributes = {
 					8579223222D39C670044B2C8 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -175,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8592E74B22D39FD7007681E5 /* Message.swift in Sources */,
 				8579223922D39C670044B2C8 /* ViewController.swift in Sources */,
 				8579223722D39C670044B2C8 /* AppDelegate.swift in Sources */,
 			);
@@ -322,9 +348,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard/BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,9 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard/BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
