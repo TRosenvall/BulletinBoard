@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8579223722D39C670044B2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579223622D39C670044B2C8 /* AppDelegate.swift */; };
-		8579223922D39C670044B2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579223822D39C670044B2C8 /* ViewController.swift */; };
 		8579223C22D39C670044B2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8579223A22D39C670044B2C8 /* Main.storyboard */; };
 		8579223E22D39C680044B2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8579223D22D39C680044B2C8 /* Assets.xcassets */; };
 		8579224122D39C680044B2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8579223F22D39C680044B2C8 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		8579223322D39C670044B2C8 /* BulletinBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulletinBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8579223622D39C670044B2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8579223822D39C670044B2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8579223B22D39C670044B2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8579223D22D39C680044B2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8579224022D39C680044B2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 		8579224A22D39CA90044B2C8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8579223822D39C670044B2C8 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,7 +198,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8592E74B22D39FD7007681E5 /* Message.swift in Sources */,
-				8579223922D39C670044B2C8 /* ViewController.swift in Sources */,
 				8579223722D39C670044B2C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
