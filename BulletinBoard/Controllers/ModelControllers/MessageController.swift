@@ -12,8 +12,15 @@ class MessageController {
     // Shared Instance
     static let sharedInstance = MessageController()
     
+    let messagesWereUpdatedNotification = Notification.Name("messagesWereUpdated")
+    
     // Source of Truth
-    var messages: [Message] = []
+    var messages: [Message] = [] {
+        didSet {
+            // Post a notification
+            NotificationCenter.default.post(name: messagesWereUpdatedNotification, object: nil)
+        }
+    }
     
     // Mark: - CRUD
     // Create
